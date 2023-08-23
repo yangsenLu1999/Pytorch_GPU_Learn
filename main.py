@@ -9,6 +9,7 @@ x = torch.randn(batch_size, n_in)
 y = torch.tensor([[1.0], [0.0], [0.0], [1.0], [1.0], [1.0], [0.0], [0.0], [1.0], [1.0]])
 
 
+
 # Create a model
 model = nn.Sequential(nn.Linear(n_in, n_h),
    nn.ReLU(),
@@ -19,7 +20,7 @@ model = nn.Sequential(nn.Linear(n_in, n_h),
 criterion = torch.nn.MSELoss()
 # Construct the optimizer (Stochastic Gradient Descent in this case)
 optimizer = torch.optim.SGD(model.parameters(), lr = 0.01)
-
+# hhh
 # Gradient Descent
 for epoch in range(50):
    # Forward pass: Compute predicted y by passing x to the model
@@ -62,4 +63,4 @@ for epoch in range(50):
 #    #Size changes from (1, 64) to (1, 10)
 #    x = self.fc2(x)
 #    return(x)
-#
+
